@@ -1,0 +1,10 @@
+<p>
+  movie-list works!
+</p>
+<ul>
+  <li *ngFor="let movie of movies">
+    <b>{{movie.title}}</b><br>
+    <p>{{movie.opening_crawl}}</p>
+    <a routerLink="/details/{{movie.episode_id}}">Details...</a>
+  </li>
+</ul>

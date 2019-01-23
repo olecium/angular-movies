@@ -1,0 +1,10 @@
+<h2>
+  Movies dashboard
+</h2>
+<ol>
+  <li *ngFor="let movie of movies; let i=index">
+    <b>{{movie.title}}</b><br>
+    <p>{{movie.opening_crawl}}</p>
+    <a routerLink="/details/{{[i+1]}}">Details...</a>
+  </li>
+</ol>
