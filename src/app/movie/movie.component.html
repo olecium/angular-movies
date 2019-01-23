@@ -1,6 +1,10 @@
-<p>
-  movie works!
-</p>
-<h1 *ngIf="movie">
-  {{movie.title}}
-</h1>
+<article *ngIf="movie">
+  <h2>
+    {{movie.title}}
+  </h2>
+  <p>{{movie.opening_crawl}}</p>
+  <p>Director: {{movie.director}}</p>
+  <p>Producer: {{movie.producer}}</p>
+  <p><i>Created on: {{movie.created | date:'MMMM yyyy'}}</i></p>
+  <p><i>Release date: {{movie.release_date | date:'d MMMM yyyy'}}</i></p>
+</article>
