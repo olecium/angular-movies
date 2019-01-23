@@ -7,4 +7,5 @@ export class Movie {
   producer: string;
   release_date: Date;
   created: Date;
+  characters: [];
 }

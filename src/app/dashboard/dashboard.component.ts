@@ -1,3 +1,4 @@
+import { AppTitleService } from './../app-title.service';
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MoviesService } from './../movies.service';
@@ -10,13 +11,17 @@ import { MoviesService } from './../movies.service';
 export class DashboardComponent implements OnInit {
 
   movies: Movie[] = [];
+  title: String;
 
   constructor(
-    private moviesService: MoviesService
-  ) { }
+    private moviesService: MoviesService,
+    private appTitleService: AppTitleService
+  ) {
+  }
 
   ngOnInit() {
     this.getMovies();
+    this.appTitleService.setTitle('Movies dashboard');
   }
 
   getMovies(): void {

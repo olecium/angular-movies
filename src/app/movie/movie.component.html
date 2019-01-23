@@ -1,10 +1,22 @@
-<article *ngIf="movie">
-  <h2>
-    {{movie.title}}
-  </h2>
-  <p>{{movie.opening_crawl}}</p>
-  <p>Director: {{movie.director}}</p>
-  <p>Producer: {{movie.producer}}</p>
-  <p><i>Created on: {{movie.created | date:'MMMM yyyy'}}</i></p>
-  <p><i>Release date: {{movie.release_date | date:'d MMMM yyyy'}}</i></p>
-</article>
+<div class="content-wrapper">
+  <article class="movie" *ngIf="movie">
+    <h2 class="movie__title">
+      {{movie.title}}
+    </h2>
+    <div class="movie__description">
+      <p>{{movie.opening_crawl}}</p>
+      <p><b>Director:</b> {{movie.director}}</p>
+      <p><b>Producer:</b> {{movie.producer}}</p>
+      <p>Created on: {{movie.created | date:'MMMM yyyy'}}<br>
+        <i>Release date: {{movie.release_date | date:'d MMMM yyyy'}}</i></p>
+      <div class="characters">
+        <p><b>Characters:</b></p>
+        <ul class="characters__list">
+          <li class="characters__name" *ngFor="let character of characters">
+            {{character.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</div>

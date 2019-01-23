@@ -7,7 +7,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MovieComponent } from './movie/movie.component';
-import { DashboardComponent } from './dashboard/dashboard.component';;
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [

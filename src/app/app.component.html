@@ -1,11 +1,10 @@
-<h1 style="text-align:center">
-  Welcome to {{ title }}!
-</h1>
-
-<nav>
-  <ul>
-    <li><a routerLink="/dashboard">Dashboard</a></li>
-    <li><a routerLink="/movies">All Movies</a></li>
-  </ul>
-</nav>
+<div class="content-wrapper">
+  <nav class="main-nav">
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a class="main-nav__link" routerLink="/dashboard">Dashboard</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" routerLink="/movies">All Movies</a></li>
+    </ul>
+  </nav>
+  <h1 class="main-title">{{title}}</h1>
+</div>
 <router-outlet></router-outlet>
