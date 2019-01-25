@@ -16,12 +16,13 @@ export class CharactersService {
   private charactersUrl = 'https://swapi.co/api/people';
 
   public getCharacters(): Observable<Character[]> {
-    return this.httpClient.get<Character[]>(this.charactersUrl);
+    return this.httpClient.get<any>(this.charactersUrl)
+      .pipe(map(x => x.results));
   }
 
   public getMovieCharacters(movieCharacters: String[]): Observable<Character[]> {
 
-    return this.httpClient.get<Character[]>(this.charactersUrl)
+    return this.httpClient.get<any>(this.charactersUrl)
       .pipe(map(characters => characters.results.filter(c => movieCharacters.indexOf(c.url) !== -1)));
   }
 }

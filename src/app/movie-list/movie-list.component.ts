@@ -10,14 +10,14 @@ import { Movie } from '../movie';
 })
 export class MovieListComponent implements OnInit {
 
-  public movies: Movie;
+  public movies: Movie[];
   title: String;
 
   constructor(
     private moviesService: MoviesService,
     private appTitleService: AppTitleService
   ) {
-    moviesService.getMovies().subscribe(x => this.movies = x.results);
+    moviesService.getMovies().subscribe(x => this.movies = x);
   }
 
   ngOnInit() {
